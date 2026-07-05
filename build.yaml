@@ -1,0 +1,9 @@
+targets:
+  $default:
+    builders:
+      # Ensure nested DTOs are serialized to plain Maps in toJson(), so the raw
+      # meeting/attendee JSON passed over the platform channel to the native
+      # Chime bridge contains only channel-safe primitives/maps/lists.
+      json_serializable:
+        options:
+          explicit_to_json: true
