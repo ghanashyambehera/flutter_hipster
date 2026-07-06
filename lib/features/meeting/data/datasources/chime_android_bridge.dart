@@ -12,10 +12,8 @@ import '../../domain/ports/rtc_event.dart';
 /// layer). Commands go out over a [MethodChannel]; SDK observer callbacks come
 /// back over an [EventChannel] and are mapped to transport-agnostic [RtcEvent]s.
 class ChimeAndroidBridge implements RtcClient {
-  ChimeAndroidBridge({
-    MethodChannel? commandChannel,
-    EventChannel? eventChannel,
-  })  : _commands = commandChannel ?? const MethodChannel('chime/commands'),
+  ChimeAndroidBridge({MethodChannel? commandChannel, EventChannel? eventChannel})  
+  : _commands = commandChannel ?? const MethodChannel('chime/commands'),
         _eventChannel = eventChannel ?? const EventChannel('chime/events');
 
   final MethodChannel _commands;

@@ -54,7 +54,7 @@ dart run build_runner build --force-jit          # generates freezed/json code
 
 flutter run \
   --dart-define=API_BASE_URL=https://assess.hipster-dev.com/api \
-  --dart-define=API_KEY=qxsm2peuW5ZiMz5Nq7DS
+  --dart-define=API_KEY=
 ```
 
 Build the release APK:
@@ -62,7 +62,7 @@ Build the release APK:
 ```bash
 flutter build apk --release \
   --dart-define=API_BASE_URL=https://assess.hipster-dev.com/api \
-  --dart-define=API_KEY=qxsm2peuW5ZiMz5Nq7DS
+  --dart-define=API_KEY= 
 # → build/app/outputs/flutter-apk/app-release.apk
 ```
 
